@@ -56,8 +56,6 @@ public class ArrayListEstadisticas implements Iestadisticas{
     public double moda() {
         //TODO implementar hashmap.
         double x = 0;
-        HashMap <Double,Double> hMap = new HashMap();
-
         return x;
     }
 
