@@ -55,29 +55,35 @@ public class ArrayListEstadisticas implements Iestadisticas{
     @Override
     public double moda() {
         //TODO implementar hashmap.
-        double x = 0;
-        return x;
+        HashMap<Double, Integer> map = new HashMap<>();
+        int aux = Integer.MIN_VALUE;
+        Double x = 0.0;
+        for (double d : aList) {
+            Integer count = map.get(d);
+            map.put(d, (count == null) ? 1 : count + 1);
+            try{
+                if (count > aux) {
+                    aux = count;
+                    if (map.containsValue(aux) == true) {
+                        x = d;
+                    }
+                }
+            }
+            catch (NullPointerException npe){
+
+            }
+        }
+        System.out.println(map);
+        return Math.round(x * 100) / 100;
     }
 
-    public int size() {
-        return 0;
-    }
 
-    public boolean isEmpty() {
-        return false;
-    }
+
 
     public void add(double o) {
         aList.add(o);
     }
 
-    public void remove(double o) {
-        aList.remove(0);
-    }
 
-    public double get(int o) {
-        aList.get(o);
-        return o;
-    }
 }
 

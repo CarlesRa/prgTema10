@@ -15,9 +15,10 @@ public class Main {
         aList.add(5.0);
         aList.add(5.0);
         aList.add(4.0);
-        System.out.println("El valor mínim es: "+aList.minimo());
-        System.out.println("El valor màxim es: "+aList.maximo());
-        System.out.println("La suma de tots els elements es: "+aList.sumatorio());
-        System.out.println("La mitjana de tots els elements es: "+aList.media());
+        System.out.println("El valor mínim es: " + aList.minimo());
+        System.out.println("El valor màxim es: " + aList.maximo());
+        System.out.println("La suma de tots els elements es: " + aList.sumatorio());
+        System.out.println("La mitjana de tots els elements es: " + aList.media());
+        System.out.println("El valor de moda es: " + aList.moda());
     }
 }
