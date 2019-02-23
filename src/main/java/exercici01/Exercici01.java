@@ -1,4 +1,4 @@
-package exercicistema10;
+package exercici01;
 
 import utils.Lib;
 
@@ -14,6 +14,7 @@ public class Exercici01 {
         System.out.println(Arrays.toString(vector));
         System.out.println(vList(vector).toString());
     }
+
     public ArrayList <Integer> vList(int [] vector){
         int puntero = vector.length-1;
         int punteroP = 0;
