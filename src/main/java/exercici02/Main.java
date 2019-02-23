@@ -19,6 +19,6 @@ public class Main {
         System.out.println("El valor màxim es: " + aList.maximo());
         System.out.println("La suma de tots els elements es: " + aList.sumatorio());
         System.out.println("La mitjana de tots els elements es: " + aList.media());
-        System.out.println("El valor de moda es: " + aList.moda());
+        System.out.println("La Key de moda es: " + aList.moda());
     }
 }
