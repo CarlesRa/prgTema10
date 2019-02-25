@@ -50,18 +50,18 @@ public class ArrayListEstadisticas implements Iestadisticas{
         x = x/aList.size();
         return Math.round(x*100)/100;
     }
-
     @Override
     public double moda() {
         HashMap<Double, Integer> map = new HashMap<>();
         int aux = Integer.MIN_VALUE;
         Double x = 0.0;
+        System.out.println(map);
         for (double d : aList) {
-            Integer count = map.get(d);
-            map.put(d, (count == null) ? 1 : count + 1);
+            Integer valor = map.get(d);
+            map.put(d, (valor == null) ? 1 : valor + 1);
             try{
-                if (count > aux) {
-                    aux = count;
+                if (valor > aux) {
+                    aux = valor;
                     if (map.containsValue(aux) == true) {
                         x = d;
                     }
