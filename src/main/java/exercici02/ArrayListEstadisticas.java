@@ -2,7 +2,6 @@ package exercici02;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class ArrayListEstadisticas implements Iestadisticas{
 
@@ -54,7 +53,6 @@ public class ArrayListEstadisticas implements Iestadisticas{
 
     @Override
     public double moda() {
-        //TODO implementar hashmap.
         HashMap<Double, Integer> map = new HashMap<>();
         int aux = Integer.MIN_VALUE;
         Double x = 0.0;
