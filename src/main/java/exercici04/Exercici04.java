@@ -1,11 +1,9 @@
 package exercici04;
 
-import utils.Lib;
-
 public class Exercici04 {
     private Cola <Integer> cola;
     public Exercici04(){
-        cola = new Cola <Integer>();
+        cola = new Cola <>();
         System.out.println("isEmpty: " + cola.isEmpty());
         System.out.println(cola.toString());
         System.out.println("Intento remover un elemento...");
