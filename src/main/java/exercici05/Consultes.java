@@ -19,17 +19,19 @@ public class Consultes{
     public int []menorMajor(){
         int [] menorMajor = new int[2];
         int menor = Integer.MAX_VALUE;
-        int major = Integer.MIN_VALUE;
+        int posicioMenor = 0;
+        int posicioMajor = 0;
         for (int i = 0; i<pacients.size(); i++){
             if(pacients.get(i).calcularEdat() < menor){
-                menor = i;
+                menor = pacients.get(i).calcularEdat();
+                posicioMenor = i;
             }
-            else{
-                major = i;
+            else {
+                posicioMajor = i;
             }
         }
-        menorMajor[0] = menor;
-        menorMajor[1] = major;
+        menorMajor[0] = posicioMenor;
+        menorMajor[1] = posicioMajor;
         return menorMajor;
     }
 

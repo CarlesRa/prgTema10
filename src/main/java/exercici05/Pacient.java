@@ -2,6 +2,9 @@ package exercici05;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Pacient {
     private int id;
@@ -91,28 +94,11 @@ public class Pacient {
     }
 
     public  int calcularEdat(){
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar dataNaiximent = Calendar.getInstance();
-        try {
-            dataNaiximent.setTime(sdf.parse(this.dataNaiximent));
-        }
-        catch (ParseException pe){
-
-        }
-        //arreplegue lora actual.
-        Calendar fechaActual = Calendar.getInstance();
-        // calcule les diferencies
-        int anys = fechaActual.get(Calendar.YEAR)-dataNaiximent.get(Calendar.YEAR);
-        int mesos = fechaActual.get(Calendar.MONTH)-dataNaiximent.get(Calendar.MONTH);
-        int dies = fechaActual.get(Calendar.DAY_OF_MONTH)-dataNaiximent.get(Calendar.DAY_OF_MONTH);
-        // filtrem els resultats
-       if (dies > 0 && mesos <=0){
-           anys--;
-       }
-       else if (dies >=0 && dies >0){
-           anys++;
-       }
-       return anys;
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaNac = LocalDate.parse(dataNaiximent, fmt);
+        LocalDate ara = LocalDate.now();
+        Period periodo = Period.between(fechaNac, ara);
+        return periodo.getYears();
     }
 
     public float calcularIMC(){
