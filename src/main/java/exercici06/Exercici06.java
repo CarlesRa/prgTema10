@@ -1,5 +1,7 @@
 package exercici06;
 
+import utils.Lib;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -21,6 +23,14 @@ public class Exercici06 {
                 case 2:{
                     traductor.traduirParaules();
                     break;
+                }
+                case 0:{
+                    break;
+                }
+                default:{
+
+                    System.out.println("Opcio incorrecta");
+                    Lib.continuar();
                 }
             }
         }while (eleccioMenu!=0);
