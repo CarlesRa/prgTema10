@@ -9,9 +9,10 @@ public class Cola <T> implements Icola <T> {
     }
 
     @Override
-    public T add(T e) {
-        cola.add(e);
-    return e;
+    public boolean add(T e) {
+        boolean s;
+        s=cola.add(e);
+    return s;
     }
 
     @Override
@@ -33,7 +34,14 @@ public class Cola <T> implements Icola <T> {
 
     @Override
     public T peek() {
-        return cola.get(0);
+        T peek = (T) new Object();
+        try{
+            peek = cola.get(0);
+        }
+        catch(IndexOutOfBoundsException iobe1){
+            System.out.println("Peek no valido, No Hay elementos en la cola");
+        }
+        return peek;
     }
 
     @Override
