@@ -1,5 +1,7 @@
 package exercici05;
 
+import java.util.ArrayList;
+
 public class Exercici05 {
     private Pacient  pacient;
     private Consultes consulta;
@@ -16,6 +18,11 @@ public class Exercici05 {
         System.out.println("Quantitat de pacients per sexes: ");
         System.out.println("Homes: " + consulta.pacientsPerSexe()[0] + "     Dones: "
         + consulta.pacientsPerSexe()[1]);
+
+        for (int i=0; i<consulta.size(); i++){
+            System.out.println("Pacient número " + (i+1) + ": "
+            + consulta.diagnosticoIMC(consulta.get(i).getIndexMasaCorporal()));
+        }
     }
 }
 

@@ -11,6 +11,7 @@ public class Pacient {
     private char sexe;
     private float altura;
     private float pes;
+    private Float indexMasaCorporal;
     //constructor
     public Pacient(int id,  String dataNaiximent,char sexe,  float pes, float altura) {
         this.id = id;
@@ -20,6 +21,7 @@ public class Pacient {
         this.altura = altura;
         this.pes = pes;
         this.edat = calcularEdat();
+        this.indexMasaCorporal = calcularIMC();
     }
 
     public int getId() {
@@ -36,6 +38,10 @@ public class Pacient {
 
     public int getEdat() {
         return edat;
+    }
+
+    public Float getIndexMasaCorporal() {
+        return indexMasaCorporal;
     }
 
     public void setEdat(int edat) {
@@ -107,6 +113,11 @@ public class Pacient {
            anys++;
        }
        return anys;
+    }
+
+    public float calcularIMC(){
+        float iMC = this.pes/(this.altura * this.altura);
+        return iMC;
     }
 
 

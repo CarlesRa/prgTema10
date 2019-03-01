@@ -13,6 +13,9 @@ public class Consultes{
     public Pacient get(int position){
         return pacients.get(position);
     }
+    public int size(){
+       return pacients.size();
+    }
     public int []menorMajor(){
         int [] menorMajor = new int[2];
         int menor = Integer.MAX_VALUE;
@@ -52,13 +55,13 @@ public class Consultes{
         if (iMC < 18.5){
             diagnostico = "Pes insuficient";
         }
-        else if (iMC == 18.5 && iMC <=24.9){
+        else if (iMC == 18.5 || iMC <=24.9){
             diagnostico = "Pes normal";
         }
-        else if (iMC == 25 && iMC <=26.9){
+        else if (iMC == 25 || iMC <=26.9){
             diagnostico = "Sobrepes grau I";
         }
-        else if (iMC == 27 && iMC <= 29.9){
+        else if (iMC == 27 || iMC <= 29.9){
             diagnostico = "Sobrepes greu II";
         }
         else{
