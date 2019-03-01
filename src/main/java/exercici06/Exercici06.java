@@ -47,10 +47,10 @@ public class Exercici06 {
             eleccio = Integer.parseInt(lec.nextLine());
         }
         catch (InputMismatchException imme){
-            System.out.println("opció incorrecta....");
+
         }
         catch (NumberFormatException nfe){
-            System.out.println("opció incorrecta....");
+
         }
         return  eleccio;
     }
