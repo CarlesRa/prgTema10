@@ -2,9 +2,9 @@ package exercici05;
 
 import java.util.ArrayList;
 
-public class Consultes{
+public class CentreSalud {
     private ArrayList <Pacient> pacients;
-    public Consultes(){
+    public CentreSalud(){
         pacients = new ArrayList<>();
     }
     public void add(Pacient e){
