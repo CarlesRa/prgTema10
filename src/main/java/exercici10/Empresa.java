@@ -27,18 +27,16 @@ public class Empresa {
         GregorianCalendar fechaNac = new GregorianCalendar();
         String fecha = "";
         float sueldo = 0;
-        Hijo hijo = new Hijo();
         int edadHijo = 0;
         String nombreHijo = "";
         char siOno;
         Empleado empleado;
+        int puntero = 0;
         boolean esCorrecte = false;
         do {
             System.out.print("Introduzca el nif: ");
             nif = lec.nextLine();
             if (!validarNif(nif)){
-                System.out.println("Dni no valido...");
-                Lib.continuar();
                 esCorrecte = false;
             }
             else {
@@ -76,6 +74,7 @@ public class Empresa {
                 System.out.print("Introduce el sueldo: ");
                 try {
                     sueldo = Float.parseFloat(lec.nextLine());
+                    esCorrecte = true;
                 } catch (NumberFormatException nfe) {
                     System.out.println("Dato incorrecto...");
                     esCorrecte = false;
@@ -85,6 +84,7 @@ public class Empresa {
                 System.out.print("Tiene hijos? introduce s ó n: ");
                 try {
                     siOno = lec.next().charAt(0);
+                    lec.nextLine();
                     if (siOno == 's' || siOno == 'S'){
                         System.out.print("Introduce el nombre del hijo: ");
                         nombreHijo = lec.nextLine();
@@ -97,17 +97,21 @@ public class Empresa {
                                 esCorrecte = false;
                             }
                         }while (!esCorrecte);
-                        hijo = new Hijo(nombreHijo,edadHijo);
-                        empleado = new Empleado(nif,nom,cognom,fechaNac,sueldo,hijo);
+                        Hijo aux = new Hijo(nombreHijo,edadHijo);
+                        empleado = new Empleado(nif,nom,cognom,fechaNac,sueldo,aux);
                         empleados.add(empleado);
+                        System.out.println(empleados.get(puntero).toString());
                         System.out.println("Empleado añadido con exito!!");
                         Lib.continuar();
+                        puntero++;
                         esCorrecte = true;
                     }
                     else if (siOno == 'n' || siOno == 'N'){
                         empleado = new Empleado(nif,nom,cognom,fechaNac,sueldo);
                         empleados.add(empleado);
+                        System.out.println(empleados.get(puntero).toString());
                         System.out.println("Empleado añadido con exito!!");
+                        puntero++;
                         Lib.continuar();
                         esCorrecte = true;
                     }
@@ -137,6 +141,7 @@ public class Empresa {
         boolean esCorrecto = false;
         do{
             System.out.print("Introduzca el nif: ");
+            nif = lec.nextLine();
         }while (!validarNif(nif));
 
         for (int i=0; i<empleados.size(); i++){
@@ -147,6 +152,7 @@ public class Empresa {
                     System.out.print("introduzca la edad: ");
                     try{
                         edad = Integer.parseInt(lec.nextLine());
+                        esCorrecto = true;
                     }
                     catch (NumberFormatException nfe){
                         System.out.println("Dato incorrecto...");
@@ -154,11 +160,50 @@ public class Empresa {
                     }
                 }while (!esCorrecto);
                 hijo = new Hijo(nombre,edad);
-                empleados.get(i).addHijo(hijo);
-            }
+                try {
+                    empleados.get(i).addHijo(hijo);
+                    esCorrecto = true;
+                }
+                catch (NullPointerException npe){
 
+                }
+                System.out.println(empleados.get(i).toString());
+            }
+        }
+        if (esCorrecto){
+            System.out.println("Hijo añadido con exito!!");
+        }
+        else{
+            System.out.println("ningun empleado con ese nif en la database...");
         }
     }
+
+    public void modificarSueldo(){
+        String nif = "";
+        float sueldo = 0;
+        boolean esCorrecto = false;
+        for (int i=0; i<empleados.size(); i++){
+            do {
+                System.out.print("Introduzca el nif: ");
+                nif = lec.nextLine();
+            }while (!validarNif(nif));
+            if (empleados.get(i).getNif().equals(nif)){
+                do{
+                    System.out.print("Introduzca el nuevo sueldo: ");
+                    try{
+                        sueldo = Float.parseFloat(lec.nextLine());
+                        esCorrecto = true;
+                    }
+                    catch (NumberFormatException nfe2){
+                        System.out.println("Dato incorrecto...");
+                        esCorrecto = false;
+                    }
+                }while (!esCorrecto);
+                empleados.get(i).setSueldo(sueldo);
+            }
+        }
+    }
+
 
     public boolean comprovarFecha(String fecha){
         try{

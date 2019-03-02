@@ -20,9 +20,11 @@ public class Exercici10 {
                     break;
                 }
                 case 2:{
+                    empresa.nuevoHijo();
                     break;
                 }
                 case 3:{
+
                     break;
                 }
                 case 4:{
@@ -76,7 +78,7 @@ public class Exercici10 {
     }
 
     public int menuPrincipal() {
-        int eleccio = Integer.MAX_VALUE;
+        int eleccio4 = Integer.MAX_VALUE;
         System.out.println("*********************");
         System.out.println("* GESTIÓN EMPLEADOS *");
         System.out.println("*********************");
@@ -91,15 +93,16 @@ public class Exercici10 {
         System.out.println("0. Salir");
         System.out.print("Seleccione una opción: ");
         try {
-            eleccio = Integer.parseInt(lec.nextLine());
+            eleccio4 = lec.nextInt();
+            lec.nextLine();
         }
         catch (NumberFormatException nfe){
 
         }
-        return eleccio;
+        return eleccio4;
     }
     public int menuConsultas(){
-        int eleccio = Integer.MAX_VALUE;
+        int eleccio3 = Integer.MAX_VALUE;
         System.out.println("***********************");
         System.out.println("* CONSULTAS EMPLEADOS *");
         System.out.println("***********************");
@@ -112,11 +115,11 @@ public class Exercici10 {
         System.out.println("0. Salir");
         System.out.print("Selecciona una opcion: ");
         try {
-            eleccio = Integer.parseInt(lec.nextLine());
+            eleccio3 = Integer.parseInt(lec.nextLine());
         }
         catch (NumberFormatException nfe1){
 
         }
-        return  eleccio;
+        return  eleccio3;
     }
 }

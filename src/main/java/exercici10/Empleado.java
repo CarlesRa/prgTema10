@@ -6,6 +6,8 @@ package exercici10;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class Empleado {
@@ -22,7 +24,8 @@ public class Empleado {
         this.cognom = cognom;
         this.fechaNac = fechaNac;
         this.sueldo = sueldo;
-        this.hijos = hijos;
+        hijos = new ArrayList<>();
+        hijos.add(hijo);
     }
 
     public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo) {
@@ -31,6 +34,7 @@ public class Empleado {
         this.cognom = cognom;
         this.fechaNac = fechaNac;
         this.sueldo = sueldo;
+        hijos = new ArrayList<>();
     }
 
     public Empleado(){
@@ -40,6 +44,18 @@ public class Empleado {
         this.fechaNac = new GregorianCalendar();
         sueldo = 0;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nif='" + nif + '\'' +
+                ", nom='" + nom + '\'' +
+                ", cognom='" + cognom + '\'' +
+                ", fechaNac=" +
+                ", sueldo=" + sueldo +
+                ", hijos=" + hijos.size()+
+                '}';
     }
 
     public Hijo getHijo(int p){
