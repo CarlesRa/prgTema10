@@ -12,11 +12,14 @@ public class Exercici10 {
     public Scanner lec;
     public Exercici10() {
         empresa = new Empresa();
-        GregorianCalendar data = new GregorianCalendar();
+        GregorianCalendar data = new GregorianCalendar(1990,02,13);
+        GregorianCalendar data1 = new GregorianCalendar(1980,02,13);
+        GregorianCalendar data2 = new GregorianCalendar(1982,02,13);
+        GregorianCalendar data3 = new GregorianCalendar(1999,02,13);
         Empleado aux = new Empleado("53215472y","juan","ramos",data,500f);
-        Empleado aux1 = new Empleado("53215474y","juan","ramos",data,500f);
-        Empleado aux2 = new Empleado("53215471y","juan","ramos",data,500f);
-        Empleado aux3 = new Empleado("53215470y","juan","ramos",data,500f);
+        Empleado aux1 = new Empleado("53215474y","pepe","ramos",data1,500f);
+        Empleado aux2 = new Empleado("53215471y","agus","ramos",data2,500f);
+        Empleado aux3 = new Empleado("53215470y","pancio","ramos",data3,500f);
         empresa.añadir(aux);
         empresa.añadir(aux1);
         empresa.añadir(aux2);
@@ -58,6 +61,7 @@ public class Exercici10 {
                                 break;
                             }
                             case 3:{
+                                empresa.buscarPorRangoFecha();
                                 break;
                             }
                             case 4:{

@@ -343,8 +343,8 @@ public class Empresa {
         }while (!esCorrecte);
 
         for (int i=0; i<empleados.size(); i++){
-            if (empleados.get(i).getFechaNac().getTimeInMillis()>fechaNac1.getTimeInMillis()
-            && empleados.get(i).getFechaNac().getTimeInMillis()<fechaNac2.getTimeInMillis()){
+            if (empleados.get(i).getFechaNac().after(fechaNac1)
+            && empleados.get(i).getFechaNac().before(fechaNac2)){
                 System.out.println(empleados.get(i).toString());
             }
         }
@@ -363,7 +363,7 @@ public class Empresa {
         return true;
     }
     public GregorianCalendar convertirFecha(String fecha)  {
-        DateFormat dF = new SimpleDateFormat(fecha);
+        DateFormat dF = new SimpleDateFormat("dd/MM/yyyy");
         Date date = null;
         try {
             date = dF.parse(fecha);

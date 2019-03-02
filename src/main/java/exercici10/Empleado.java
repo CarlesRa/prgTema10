@@ -52,7 +52,7 @@ public class Empleado {
                 "nif='" + nif + '\'' +
                 ", nom='" + nom + '\'' +
                 ", cognom='" + cognom + '\'' +
-                ", fechaNac=" +
+                ", fechaNac=" +fechaNac.getTime()+
                 ", sueldo=" + sueldo +
                 ", hijos=" + hijos.size()+
                 '}';
