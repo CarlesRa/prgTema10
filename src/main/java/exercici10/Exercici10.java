@@ -13,8 +13,14 @@ public class Exercici10 {
     public Exercici10() {
         empresa = new Empresa();
         GregorianCalendar data = new GregorianCalendar();
-        Empleado aux = new Empleado("53215474y","juan","ramos",data,500f);
+        Empleado aux = new Empleado("53215472y","juan","ramos",data,500f);
+        Empleado aux1 = new Empleado("53215474y","juan","ramos",data,500f);
+        Empleado aux2 = new Empleado("53215471y","juan","ramos",data,500f);
+        Empleado aux3 = new Empleado("53215470y","juan","ramos",data,500f);
         empresa.añadir(aux);
+        empresa.añadir(aux1);
+        empresa.añadir(aux2);
+        empresa.añadir(aux3);
         lec = new Scanner(System.in);
         do {
             eleccio = menuPrincipal();

@@ -308,6 +308,50 @@ public class Empresa {
 
     }
 
+    public void buscarPorRangoFecha(){
+        String fecha1 = "";
+        String fecha2 = "";
+        GregorianCalendar fechaNac1 = new GregorianCalendar();
+        GregorianCalendar fechaNac2 = new GregorianCalendar();
+        boolean esCorrecte = false;
+        do {
+            System.out.print("Introduce la primera fecha: ");
+            fecha1 = lec.nextLine();
+            if (comprovarFecha(fecha1) == false){
+                System.out.println("Fecha incorecta...");
+                Lib.continuar();
+                esCorrecte = false;
+            }
+            else {
+                fechaNac1 = convertirFecha(fecha1);
+                esCorrecte = true;
+            }
+        }while (!esCorrecte);
+        esCorrecte = false;
+        do {
+            System.out.print("Introduce la segunda fecha: ");
+            fecha1 = lec.nextLine();
+            if (comprovarFecha(fecha1) == false){
+                System.out.println("Fecha incorecta...");
+                Lib.continuar();
+                esCorrecte = false;
+            }
+            else {
+                fechaNac2 = convertirFecha(fecha1);
+                esCorrecte = true;
+            }
+        }while (!esCorrecte);
+
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getFechaNac().getTimeInMillis()>fechaNac1.getTimeInMillis()
+            && empleados.get(i).getFechaNac().getTimeInMillis()<fechaNac2.getTimeInMillis()){
+                System.out.println(empleados.get(i).toString());
+            }
+        }
+    }
+
+
+
     public boolean comprovarFecha(String fecha){
         try{
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
