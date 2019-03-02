@@ -157,6 +157,7 @@ public class Empresa {
                     catch (NumberFormatException nfe){
                         System.out.println("Dato incorrecto...");
                         esCorrecto = false;
+                        Lib.continuar();
                     }
                 }while (!esCorrecto);
                 hijo = new Hijo(nombre,edad);
@@ -222,7 +223,43 @@ public class Empresa {
             System.out.println("Empleado borrado con exito!!");
             Lib.continuar();
         }
+        else{
+            System.out.println("ningun empleado con ese nif....");
+            Lib.continuar();
+        }
     }
+
+    public  void  borrarHijo(){
+        String nif = "";
+        boolean esCorrecto = false;
+        int posicion = 0;
+        String nombreHijo = "";
+        do {
+            System.out.print("Introduzca el nif: ");
+            nif = lec.nextLine();
+        }while (!validarNif(nif));
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getNif().equalsIgnoreCase(nif)){
+                System.out.println("Introduce el nombre del hijo: ");
+                nombreHijo = lec.nextLine();
+                for (int z=0; z<empleados.get(i).getSize(); z++){
+                    if (empleados.get(i).getHijo(z).getNom().equalsIgnoreCase(nombreHijo)){
+                        empleados.get(i).removerHiho(z);
+                        esCorrecto = true;
+                    }
+                }
+            }
+        }
+        if (esCorrecto){
+            System.out.println("Hijo eliminado con exito!!");
+            Lib.continuar();
+        }
+        else{
+            System.out.println("ningun empleado con ese nif....");
+            Lib.continuar();
+        }
+    }
+
 
     public boolean comprovarFecha(String fecha){
         try{
@@ -255,6 +292,9 @@ public class Empresa {
         else{
             return true;
         }
+    }
+    public void visualizarEmpleados(){
+        System.out.println(empleados);
     }
 
 }

@@ -28,15 +28,14 @@ public class Exercici10 {
                     break;
                 }
                 case 4:{
+                    empresa.borrarEmpleado();
                     break;
                 }
                 case 5:{
+                    empresa.borrarHijo();
                     break;
                 }
                 case 6:{
-                    break;
-                }
-                case 7:{
                     do{
                         eleccio2 = menuConsultas();
                         switch (eleccio2){
@@ -66,6 +65,9 @@ public class Exercici10 {
                         }
                     }while (eleccio2!=0 || eleccio2>5 || eleccio2<0);
                 }
+                case 8:{
+                    empresa.visualizarEmpleados();
+                }
                 case 0:{
                     break;
                 }
@@ -87,8 +89,7 @@ public class Exercici10 {
         System.out.println("3. Modificar sueldo");
         System.out.println("4. Borrar empleado");
         System.out.println("5. Borrar hijo");
-        System.out.println("6. Borrar hijo");
-        System.out.println("7. Consultas");
+        System.out.println("6. Consultas");
         System.out.println("---------------------");
         System.out.println("0. Salir");
         System.out.print("Seleccione una opción: ");

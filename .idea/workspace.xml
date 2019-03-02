@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b42e0c71-c6e6-46fa-bf94-95b9caf6b29a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java" afterDir="false" />
     </list>
@@ -75,11 +76,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+                <state relative-caret-position="1365">
+                  <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -115,31 +116,21 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="222" column="28" selection-start-line="222" selection-start-column="28" selection-end-line="222" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#321#322#0" expanded="true" />
-                    <element signature="e#371#372#0" expanded="true" />
-                    <element signature="e#388#389#0" expanded="true" />
-                    <element signature="e#427#428#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empleado.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="741">
-                  <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+                <state relative-caret-position="1065">
+                  <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#828#829#0" expanded="true" />
+                    <element signature="e#863#864#0" expanded="true" />
                     <element signature="e#896#897#0" expanded="true" />
                     <element signature="e#924#925#0" expanded="true" />
+                    <element signature="e#1725#1726#0" expanded="true" />
+                    <element signature="e#1759#1760#0" expanded="true" />
+                    <element signature="e#1791#1792#0" expanded="true" />
+                    <element signature="e#1811#1812#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -150,26 +141,15 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empleado.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+                <state relative-caret-position="261">
+                  <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#841#842#0" expanded="true" />
-                    <element signature="e#876#877#0" expanded="true" />
-                    <element signature="e#909#910#0" expanded="true" />
-                    <element signature="e#937#938#0" expanded="true" />
+                    <element signature="e#10031#10032#0" expanded="true" />
+                    <element signature="e#10067#10068#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -326,7 +306,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551552878603" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551554350869" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -605,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551547769924</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="añado borrar emoleado">
+      <created>1551552901475</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552901475</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -635,7 +622,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286638" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3286638" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286638" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.33728448" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3293718" />
@@ -677,7 +664,8 @@
     <MESSAGE value="añadir empleado completado" />
     <MESSAGE value="añadir hijo en marcha" />
     <MESSAGE value="añadir modificar sueldo" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadir modificar sueldo" />
+    <MESSAGE value="añado borrar emoleado" />
+    <option name="LAST_COMMIT_MESSAGE" value="añado borrar emoleado" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.gradle">
@@ -976,28 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empleado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Lib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1005,16 +971,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empleado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="222" column="28" selection-start-line="222" selection-start-column="28" selection-end-line="222" selection-end-column="28" />
+        <state relative-caret-position="1065">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10031#10032#0" expanded="true" />
+            <element signature="e#10067#10068#0" expanded="true" />
           </folding>
         </state>
       </provider>

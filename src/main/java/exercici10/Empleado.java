@@ -69,6 +69,12 @@ public class Empleado {
         return nif;
     }
 
+    public int getSize(){
+        return hijos.size();
+    }
+    public void removerHiho(int e){
+        hijos.remove(e);
+    }
     public void setNif(String nif) {
         this.nif = nif;
     }
