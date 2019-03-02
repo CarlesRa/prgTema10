@@ -2,6 +2,7 @@ package exercici10;
 
 import utils.Lib;
 
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Exercici10 {
@@ -11,6 +12,9 @@ public class Exercici10 {
     public Scanner lec;
     public Exercici10() {
         empresa = new Empresa();
+        GregorianCalendar data = new GregorianCalendar();
+        Empleado aux = new Empleado("53215474y","juan","ramos",data,500f);
+        empresa.añadir(aux);
         lec = new Scanner(System.in);
         do {
             eleccio = menuPrincipal();

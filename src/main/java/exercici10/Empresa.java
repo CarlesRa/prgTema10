@@ -285,12 +285,15 @@ public class Empresa {
 
     public void buscarPorNombre(){
         String nombre = "";
+        String subNombre = "";
         boolean esta = false;
         int posicion = 0;
         System.out.print("Introduzca el nombre: ");
         nombre = lec.nextLine();
+        subNombre = nombre.substring(0,nombre.length()-1);
+        System.out.println(subNombre);
         for (int i=0; i<empleados.size(); i++){
-            if (empleados.get(i).getNom().equalsIgnoreCase(nombre.substring(nombre.length()))){
+            if (empleados.get(i).getNom().substring(0,nombre.length()).equalsIgnoreCase(nombre)){
                 esta = true;
                 posicion = i;
             }
@@ -299,7 +302,7 @@ public class Empresa {
             System.out.println(empleados.get(posicion).toString());
         }
         else{
-            System.out.println("ningun empleado con ese nif....");
+            System.out.println("ningun empleado con ese nombre....");
             Lib.continuar();
         }
 
@@ -340,6 +343,11 @@ public class Empresa {
 
     public void visualizarEmpleados(){
         System.out.println(empleados);
+    }
+
+    public void añadir(Empleado e){
+        empleados.add(e);
+        puntero++;
     }
 
 }
