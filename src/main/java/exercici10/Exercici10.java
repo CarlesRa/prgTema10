@@ -40,6 +40,7 @@ public class Exercici10 {
                         eleccio2 = menuConsultas();
                         switch (eleccio2){
                             case 1:{
+                                empresa.buscarPorNif();
                                 break;
                             }
                             case 2:{

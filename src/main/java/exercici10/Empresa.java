@@ -232,7 +232,6 @@ public class Empresa {
     public  void  borrarHijo(){
         String nif = "";
         boolean esCorrecto = false;
-        int posicion = 0;
         String nombreHijo = "";
         do {
             System.out.print("Introduzca el nif: ");
@@ -259,6 +258,31 @@ public class Empresa {
             Lib.continuar();
         }
     }
+
+    public void  buscarPorNif(){
+        String nif = "";
+        boolean esCorrecto = false;
+        int posicion = 0;
+        do {
+            System.out.print("Introduzca el nif: ");
+            nif = lec.nextLine();
+        }while (!validarNif(nif));
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getNif().equalsIgnoreCase(nif)){
+                esCorrecto = true;
+                posicion = i;
+            }
+        }
+        if (esCorrecto){
+            System.out.println(empleados.get(posicion).toString());
+            Lib.continuar();
+        }
+        else{
+            System.out.println("ningun empleado con ese nif....");
+            Lib.continuar();
+        }
+    }
+
 
 
     public boolean comprovarFecha(String fecha){
@@ -293,6 +317,7 @@ public class Empresa {
             return true;
         }
     }
+
     public void visualizarEmpleados(){
         System.out.println(empleados);
     }
