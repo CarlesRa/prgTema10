@@ -16,13 +16,21 @@ public class Empleado {
     private float sueldo;
     private ArrayList<Hijo>hijos;
 
-    public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo, ArrayList<Hijo> hijos) {
+    public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo,Hijo hijo) {
         this.nif = nif;
         this.nom = nom;
         this.cognom = cognom;
         this.fechaNac = fechaNac;
         this.sueldo = sueldo;
         this.hijos = hijos;
+    }
+
+    public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo) {
+        this.nif = nif;
+        this.nom = nom;
+        this.cognom = cognom;
+        this.fechaNac = fechaNac;
+        this.sueldo = sueldo;
     }
 
     public Empleado(){
@@ -34,12 +42,11 @@ public class Empleado {
 
     }
 
-    public ArrayList<Hijo> getHijos() {
-        return hijos;
+    public Hijo getHijo(int p){
+        return hijos.get(p);
     }
-
-    public void setHijos(ArrayList<Hijo> hijos) {
-        this.hijos = hijos;
+    public void addHijo(Hijo e){
+        hijos.add(e);
     }
 
     public String getNif() {

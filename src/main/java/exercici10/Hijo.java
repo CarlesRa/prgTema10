@@ -12,6 +12,10 @@ public class Hijo {
         this.nom = nom;
         this.edad = edad;
     }
+    public Hijo(){
+        nom = "";
+        edad = 0;
+    }
 
     public String getNom() {
         return nom;

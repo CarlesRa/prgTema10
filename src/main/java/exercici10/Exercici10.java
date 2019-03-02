@@ -16,6 +16,7 @@ public class Exercici10 {
             eleccio = menuPrincipal();
             switch (eleccio){
                 case 1:{
+                    empresa.nuevoEmpleado();
                     break;
                 }
                 case 2:{
@@ -38,7 +39,6 @@ public class Exercici10 {
                         eleccio2 = menuConsultas();
                         switch (eleccio2){
                             case 1:{
-                                empresa.nuevoEmpleado();
                                 break;
                             }
                             case 2:{
