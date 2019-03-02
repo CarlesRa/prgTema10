@@ -283,7 +283,27 @@ public class Empresa {
         }
     }
 
+    public void buscarPorNombre(){
+        String nombre = "";
+        boolean esta = false;
+        int posicion = 0;
+        System.out.print("Introduzca el nombre: ");
+        nombre = lec.nextLine();
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getNom().equalsIgnoreCase(nombre.substring(nombre.length()))){
+                esta = true;
+                posicion = i;
+            }
+        }
+        if (esta){
+            System.out.println(empleados.get(posicion).toString());
+        }
+        else{
+            System.out.println("ningun empleado con ese nif....");
+            Lib.continuar();
+        }
 
+    }
 
     public boolean comprovarFecha(String fecha){
         try{

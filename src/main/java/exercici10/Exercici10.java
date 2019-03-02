@@ -44,6 +44,7 @@ public class Exercici10 {
                                 break;
                             }
                             case 2:{
+                                empresa.buscarPorNombre();
                                 break;
                             }
                             case 3:{
