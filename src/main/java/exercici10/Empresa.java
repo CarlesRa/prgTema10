@@ -36,7 +36,7 @@ public class Empresa {
         do {
             System.out.print("Introduzca el nif: ");
             nif = lec.nextLine();
-            if (nif.length() != 9 || Character.isLetter(nif.charAt(8)) == false){
+            if (!validarNif(nif)){
                 System.out.println("Dni no valido...");
                 Lib.continuar();
                 esCorrecte = false;
@@ -126,7 +126,40 @@ public class Empresa {
         else{
             System.out.println("El empleado ya esta en la base de datos...");
         }
+
     }
+
+    public void nuevoHijo(){
+        String nif = "";
+        String nombre = "";
+        int edad = 0;
+        Hijo hijo;
+        boolean esCorrecto = false;
+        do{
+            System.out.print("Introduzca el nif: ");
+        }while (!validarNif(nif));
+
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getNif().equalsIgnoreCase(nif)){
+                System.out.print("Introduzca el nombre: ");
+                nombre = lec.nextLine();
+                do{
+                    System.out.print("introduzca la edad: ");
+                    try{
+                        edad = Integer.parseInt(lec.nextLine());
+                    }
+                    catch (NumberFormatException nfe){
+                        System.out.println("Dato incorrecto...");
+                        esCorrecto = false;
+                    }
+                }while (!esCorrecto);
+                hijo = new Hijo(nombre,edad);
+                empleados.get(i).addHijo(hijo);
+            }
+
+        }
+    }
+
     public boolean comprovarFecha(String fecha){
         try{
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
@@ -149,4 +182,15 @@ public class Empresa {
         cal.setTime(date);
         return  cal;
     }
+    public boolean validarNif(String nif){
+        if (nif.length() != 9 || Character.isLetter(nif.charAt(8)) == false){
+            System.out.println("Dni no valido...");
+            Lib.continuar();
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
 }
