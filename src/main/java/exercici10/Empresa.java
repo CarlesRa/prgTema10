@@ -9,6 +9,7 @@ import java.util.*;
 
 public class Empresa {
     private ArrayList <Empleado> empleados;
+    private int puntero = 0;
     private Scanner lec = new Scanner(System.in);
     public Empresa() {
         this.empleados = new ArrayList<>();
@@ -31,7 +32,6 @@ public class Empresa {
         String nombreHijo = "";
         char siOno;
         Empleado empleado;
-        int puntero = 0;
         boolean esCorrecte = false;
         do {
             System.out.print("Introduzca el nif: ");
@@ -182,11 +182,11 @@ public class Empresa {
         String nif = "";
         float sueldo = 0;
         boolean esCorrecto = false;
+        do {
+            System.out.print("Introduzca el nif: ");
+            nif = lec.nextLine();
+        }while (!validarNif(nif));
         for (int i=0; i<empleados.size(); i++){
-            do {
-                System.out.print("Introduzca el nif: ");
-                nif = lec.nextLine();
-            }while (!validarNif(nif));
             if (empleados.get(i).getNif().equals(nif)){
                 do{
                     System.out.print("Introduzca el nuevo sueldo: ");
@@ -204,6 +204,25 @@ public class Empresa {
         }
     }
 
+    public  void  borrarEmpleado(){
+        String nif = "";
+        boolean esCorrecto = false;
+        do {
+            System.out.print("Introduzca el nif: ");
+            nif = lec.nextLine();
+        }while (!validarNif(nif));
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getNif().equalsIgnoreCase(nif)){
+                empleados.remove(i);
+                puntero--;
+                esCorrecto = true;
+            }
+        }
+        if (esCorrecto){
+            System.out.println("Empleado borrado con exito!!");
+            Lib.continuar();
+        }
+    }
 
     public boolean comprovarFecha(String fecha){
         try{

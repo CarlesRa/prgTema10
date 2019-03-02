@@ -24,7 +24,7 @@ public class Exercici10 {
                     break;
                 }
                 case 3:{
-
+                    empresa.modificarSueldo();
                     break;
                 }
                 case 4:{
