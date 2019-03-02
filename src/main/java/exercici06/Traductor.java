@@ -38,7 +38,12 @@ public class Traductor {
         String paraula;
         System.out.print("Inserta paraula a buscar: ");
         paraula = lec.nextLine();
-        System.out.println(traductor.get(paraula));
+        try {
+            System.out.println(traductor.get(paraula));
+        }
+        catch (NullPointerException npe){
+            System.out.println("No existeix la paraula...");
+        }
         Lib.continuar();
     }
 }
