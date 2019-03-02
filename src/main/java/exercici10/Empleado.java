@@ -55,7 +55,8 @@ public class Empleado {
                 ", fechaNac=" +fechaNac.getTime()+
                 ", sueldo=" + sueldo +
                 ", hijos=" + hijos.size()+
-                '}';
+
+                '}'+"\n";
     }
 
     public Hijo getHijo(int p){

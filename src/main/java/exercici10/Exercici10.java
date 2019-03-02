@@ -65,6 +65,7 @@ public class Exercici10 {
                                 break;
                             }
                             case 4:{
+                                //TODO METODE RANGO DE SUELDO
                                 break;
                             }
                             case 5:{
@@ -80,6 +81,7 @@ public class Exercici10 {
                             }
                         }
                     }while (eleccio2!=0 || eleccio2>5 || eleccio2<0);
+                break;
                 }
                 case 8:{
                     empresa.visualizarEmpleados();
@@ -92,7 +94,7 @@ public class Exercici10 {
                     Lib.continuar();
                 }
             }
-        }while (eleccio != 0 || eleccio2>7 || eleccio2<0);
+        }while (eleccio != 0 || eleccio2>6 || eleccio2<0);
     }
 
     public int menuPrincipal() {
