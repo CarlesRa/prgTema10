@@ -350,7 +350,50 @@ public class Empresa {
         }
     }
 
+    public void budcarPorRangoSueldo(){
+        float sueldo1 = 0;
+        float sueldo2 = 0;
+        boolean esCorrecto = false;
 
+        do{
+            System.out.print("Desde: ");
+            try{
+                sueldo1 = Float.parseFloat(lec.nextLine());
+                esCorrecto = true;
+            }
+            catch(NumberFormatException nfe){
+                System.out.println("Dato incorrecto...");
+                esCorrecto = false;
+            }
+        }while (!esCorrecto);
+        do{
+            System.out.print("Hasta: ");
+            try{
+                sueldo2 = Float.parseFloat(lec.nextLine());
+                esCorrecto = true;
+            }
+            catch(NumberFormatException nfe){
+                System.out.println("Dato incorrecto...");
+                esCorrecto = false;
+            }
+        }while (!esCorrecto);
+        for (int i=0; i<empleados.size(); i++){
+            if (empleados.get(i).getSueldo()>=sueldo1 && empleados.get(i).getSueldo()<=sueldo2){
+                System.out.println(empleados.get(i).toString());
+            }
+        }
+    }
+
+    public void buscarPorHijosMenores(){
+        for (int i=0; i<empleados.size(); i++){
+            for (int z=0; z<empleados.get(i).getSize(); z++){
+                if (empleados.get(i).getHijo(z).getEdad()<18){
+                    System.out.println(empleados.get(i));
+                }
+            }
+
+        }
+    }
 
     public boolean comprovarFecha(String fecha){
         try{
