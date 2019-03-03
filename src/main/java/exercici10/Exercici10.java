@@ -65,10 +65,11 @@ public class Exercici10 {
                                 break;
                             }
                             case 4:{
-                                //TODO METODE RANGO DE SUELDO
+                                empresa.buscarPorRangoSueldo();
                                 break;
                             }
                             case 5:{
+                                empresa.buscarPorHijosMenores();
                                 break;
                             }
                             case 0:{
@@ -129,7 +130,7 @@ public class Exercici10 {
         System.out.println("2. Buscar por nombre");
         System.out.println("3. Buscar por rango de edad");
         System.out.println("4. Buscar por rango de sueldo");
-        System.out.println("4. Buscar por hijos menores de edad");
+        System.out.println("5. Buscar por hijos menores de edad");
         System.out.println("---------------------");
         System.out.println("0. Salir");
         System.out.print("Selecciona una opcion: ");

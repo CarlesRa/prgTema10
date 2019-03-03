@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b42e0c71-c6e6-46fa-bf94-95b9caf6b29a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,8 +78,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="67" column="61" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+                <state relative-caret-position="52">
+                  <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -148,8 +148,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="346" column="53" selection-start-line="346" selection-start-column="53" selection-end-line="346" selection-end-column="53" />
+                <state relative-caret-position="42">
+                  <caret line="352" column="19" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#12095#12096#0" expanded="true" />
@@ -174,6 +174,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>remove</find>
+      <find>z</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,8 +206,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/exercici10/Hijo.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercici10/Consultas.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercici10/Empleado.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exercici10/Empresa.java" />
         <option value="$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java" />
       </list>
     </option>
@@ -321,7 +322,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551560259567" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551630207489" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -649,7 +650,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551559737852</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="FINS DEMA AL MATI!!">
+      <created>1551560279772</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1551560279772</updated>
+    </task>
+    <task id="LOCAL-00031" summary="totes les busquedes fetes">
+      <created>1551629987499</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1551629987499</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">
@@ -663,7 +678,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2646" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.18996799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -680,7 +694,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286638" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286638" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33728448" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33728448" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3293718" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3297414" />
@@ -727,7 +741,9 @@
     <MESSAGE value="buscar por nombre fet!" />
     <MESSAGE value="buscar por rango fechas test" />
     <MESSAGE value="buscar por rango fechas Fet!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="buscar por rango fechas Fet!!!!" />
+    <MESSAGE value="FINS DEMA AL MATI!!" />
+    <MESSAGE value="totes les busquedes fetes" />
+    <option name="LAST_COMMIT_MESSAGE" value="totes les busquedes fetes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.gradle">
@@ -1012,18 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="346" column="53" selection-start-line="346" selection-start-column="53" selection-end-line="346" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12095#12096#0" expanded="true" />
-            <element signature="e#12140#12141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empleado.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -1072,10 +1076,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="352" column="19" selection-start-line="352" selection-start-column="19" selection-end-line="352" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12095#12096#0" expanded="true" />
+            <element signature="e#12140#12141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/exercici10/Exercici10.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="67" column="61" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+        <state relative-caret-position="52">
+          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

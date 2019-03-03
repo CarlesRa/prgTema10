@@ -350,7 +350,7 @@ public class Empresa {
         }
     }
 
-    public void budcarPorRangoSueldo(){
+    public void buscarPorRangoSueldo(){
         float sueldo1 = 0;
         float sueldo2 = 0;
         boolean esCorrecto = false;
