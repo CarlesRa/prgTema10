@@ -2,6 +2,7 @@ package exercici10;
 
 import utils.Lib;
 
+import javax.management.NotCompliantMBeanException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,6 +33,7 @@ public class Empresa {
         String nombreHijo = "";
         char siOno;
         Empleado empleado;
+        int numHijos = 0;
         boolean esCorrecte = false;
         do {
             System.out.print("Introduzca el nif: ");
@@ -80,31 +82,48 @@ public class Empresa {
                     esCorrecte = false;
                 }
             }while (!esCorrecte);
+            empleado = new Empleado(nif, nom, cognom, fechaNac, sueldo);
+            esCorrecte = false;
             do {
                 System.out.print("Tiene hijos? introduce s ó n: ");
                 try {
                     siOno = lec.next().charAt(0);
                     lec.nextLine();
                     if (siOno == 's' || siOno == 'S'){
-                        System.out.print("Introduce el nombre del hijo: ");
-                        nombreHijo = lec.nextLine();
-                        System.out.print("Introduce la edad: ");
-                        do {
+                        do{
+                            System.out.print("Cuantos hijos desea añadir?:");
                             try {
-                                edadHijo = Integer.parseInt(lec.nextLine());
-                            } catch (NumberFormatException nfe2) {
+                                numHijos = Integer.parseInt(lec.nextLine());
+                                esCorrecte = true;
+                            }
+                            catch (NumberFormatException nfe){
                                 System.out.println("Dato incorrecto...");
+                                Lib.continuar();
                                 esCorrecte = false;
                             }
-                        }while (!esCorrecte);
-                        Hijo aux = new Hijo(nombreHijo,edadHijo);
-                        empleado = new Empleado(nif,nom,cognom,fechaNac,sueldo,aux);
-                        empleados.add(empleado);
+                        }while(!esCorrecte);
+                        for (int i=0; i<numHijos; i++) {
+                            System.out.print("Introduce el nombre del hijo: ");
+                            nombreHijo = lec.nextLine();
+                            System.out.print("Introduce la edad: ");
+                            do {
+                                try {
+                                    edadHijo = Integer.parseInt(lec.nextLine());
+                                } catch (NumberFormatException nfe2) {
+                                    System.out.println("Dato incorrecto...");
+                                    esCorrecte = false;
+                                }
+                            } while (!esCorrecte);
+                            Hijo aux = new Hijo(nombreHijo, edadHijo);
+                            empleado.addHijo(aux);
+                            empleados.add(empleado);
+                        }
                         System.out.println(empleados.get(puntero).toString());
                         System.out.println("Empleado añadido con exito!!");
                         Lib.continuar();
                         puntero++;
                         esCorrecte = true;
+
                     }
                     else if (siOno == 'n' || siOno == 'N'){
                         empleado = new Empleado(nif,nom,cognom,fechaNac,sueldo);
@@ -131,6 +150,27 @@ public class Empresa {
             System.out.println("El empleado ya esta en la base de datos...");
         }
 
+    }
+
+    public void  añadirEmpleadoAleatorios(){
+        String [] nif ={"53215474y","52314578p","12457845v","45789865d","24378495s","34768798q"};
+        String [] nombre = {"pepe","juan","paco","juanito","esperanza","juana","Micaela","jacinta"};
+        String [] cognom = {"Ramos","Perez","fernandez","Trillo","Morata","Rojas","Martinez"};
+        Empleado empleadoAux;
+        Hijo hijoAux;
+        int [] edadHijo = {1,3,4,12,2,7,9,8,6,11,10};
+        GregorianCalendar [] fechaNac = {new GregorianCalendar(1990,1,3),new GregorianCalendar(1985,12,23)
+        ,new GregorianCalendar(2000,4,18),new GregorianCalendar(2001,10,25)};
+        float [] sueldo = {2000f,1980f,4500f,2500f,13000f,1250f,1000f};
+        for (int i=0; i<nif.length; i++){
+            empleadoAux = new Empleado(nif[i],nombre[Lib.random(0,nombre.length-1)],cognom[Lib.random(0,cognom.length-1)],
+            fechaNac[Lib.random(0,fechaNac.length-1)],sueldo[Lib.random(0,sueldo.length-1)]);
+            empleados.add(empleadoAux);
+            for(int z=0; z<Lib.random(0,3);z++){
+                hijoAux = new Hijo(nombre[Lib.random(0,nombre.length-1)],edadHijo[Lib.random(0,edadHijo.length-1)]);
+                empleadoAux.addHijo(hijoAux);
+            }
+        }
     }
 
     public void nuevoHijo(){
@@ -289,8 +329,13 @@ public class Empresa {
         boolean esta = false;
         int posicion = 0;
         System.out.print("Introduzca el nombre: ");
-        nombre = lec.nextLine();
-        subNombre = nombre.substring(0,nombre.length()-1);
+            nombre = lec.nextLine();
+        try {
+            subNombre = nombre.substring(0, nombre.length() - 1);
+        }
+        catch (StringIndexOutOfBoundsException sfe){
+
+        }
         System.out.println(subNombre);
         for (int i=0; i<empleados.size(); i++){
             if (empleados.get(i).getNom().substring(0,nombre.length()).equalsIgnoreCase(nombre)){

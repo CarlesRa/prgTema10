@@ -18,16 +18,6 @@ public class Empleado {
     private float sueldo;
     private ArrayList<Hijo>hijos;
 
-    public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo,Hijo hijo) {
-        this.nif = nif;
-        this.nom = nom;
-        this.cognom = cognom;
-        this.fechaNac = fechaNac;
-        this.sueldo = sueldo;
-        hijos = new ArrayList<>();
-        hijos.add(hijo);
-    }
-
     public Empleado(String nif, String nom, String cognom, GregorianCalendar fechaNac, float sueldo) {
         this.nif = nif;
         this.nom = nom;
@@ -52,7 +42,9 @@ public class Empleado {
                 "nif='" + nif + '\'' +
                 ", nom='" + nom + '\'' +
                 ", cognom='" + cognom + '\'' +
-                ", fechaNac=" +fechaNac.getTime()+
+                ", fechaNac=" +fechaNac.get(Calendar.DAY_OF_MONTH)
+                + "/" + fechaNac.get(Calendar.MONTH) + "/"
+                + fechaNac.get(Calendar.YEAR) +
                 ", sueldo=" + sueldo +
                 ", hijos=" + hijos.size()+
 
