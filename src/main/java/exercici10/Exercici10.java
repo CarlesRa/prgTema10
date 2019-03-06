@@ -65,7 +65,7 @@ public class Exercici10 {
                                 break;
                             }
                             default:{
-                                System.out.println("Opcion incorreta...");
+                                System.out.println("Opción incorreta...");
                                 Lib.continuar();
                                 break;
                             }
@@ -89,6 +89,7 @@ public class Exercici10 {
 
     public int menuPrincipal() {
         int eleccio4 = Integer.MAX_VALUE;
+        Lib.limpiarPantalla();
         System.out.println("*********************");
         System.out.println("* GESTIÓN EMPLEADOS *");
         System.out.println("*********************");
@@ -111,6 +112,7 @@ public class Exercici10 {
         return eleccio4;
     }
     public int menuConsultas(){
+        Lib.limpiarPantalla();
         int eleccio3 = Integer.MAX_VALUE;
         System.out.println("***********************");
         System.out.println("* CONSULTAS EMPLEADOS *");

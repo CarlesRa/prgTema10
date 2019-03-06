@@ -165,7 +165,7 @@ public class Empresa {
         String [] cognom = {"Ramos","Perez","fernandez","Trillo","Morata","Rojas","Martinez"};
         Empleado empleadoAux;
         Hijo hijoAux;
-        int [] edadHijo = {1,3,4,12,2,7,9,8,6,11,10};
+        int [] edadHijo = {1,25,4,18,28,7,9,38,6,19,10};
         GregorianCalendar [] fechaNac = {new GregorianCalendar(1990,1,3),new GregorianCalendar(1985,12,23)
         ,new GregorianCalendar(2000,4,18),new GregorianCalendar(2001,10,25)};
         float [] sueldo = {2000f,1980f,4500f,2500f,13000f,1250f,1000f};
@@ -221,9 +221,11 @@ public class Empresa {
         }
         if (esCorrecto){
             System.out.println("Hijo añadido con exito!!");
+            Lib.continuar();
         }
         else{
             System.out.println("ningun empleado con ese nif en la database...");
+            Lib.continuar();
         }
     }
 
@@ -249,7 +251,13 @@ public class Empresa {
                     }
                 }while (!esCorrecto);
                 empleados.get(i).setSueldo(sueldo);
+                System.out.println("Sueldo modificado con éxito!!");
+                Lib.continuar();
             }
+        }
+        if (!esCorrecto){
+            System.out.println("Ningun empleado con ese nif...");
+            Lib.continuar();
         }
     }
 
@@ -362,7 +370,7 @@ public class Empresa {
         do {
             System.out.print("Introduce la primera fecha: ");
             fecha1 = lec.nextLine();
-            if (comprovarFecha(fecha1) == false){
+            if (!comprovarFecha(fecha1)){
                 System.out.println("Fecha incorecta...");
                 Lib.continuar();
                 esCorrecte = false;
@@ -376,7 +384,7 @@ public class Empresa {
         do {
             System.out.print("Introduce la segunda fecha: ");
             fecha1 = lec.nextLine();
-            if (comprovarFecha(fecha1) == false){
+            if (!comprovarFecha(fecha2)){
                 System.out.println("Fecha incorecta...");
                 Lib.continuar();
                 esCorrecte = false;
@@ -434,6 +442,7 @@ public class Empresa {
             for (int z=0; z<empleados.get(i).getSize(); z++){
                 if (empleados.get(i).getHijo(z).getEdad()<18){
                     System.out.println(empleados.get(i));
+                    z = empleados.get(i).getSize();
                 }
             }
 
@@ -476,10 +485,4 @@ public class Empresa {
     public void visualizarEmpleados(){
         System.out.println(empleados);
     }
-
-    public void añadir(Empleado e){
-        empleados.add(e);
-        puntero++;
-    }
-
 }

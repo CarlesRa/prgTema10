@@ -62,7 +62,12 @@ public class Lib {
 
         }
 
-        //Generar un numero random compres entre dos enters.
+    /**
+     * Genera un numero random.
+     * @param min desde
+     * @param max hasta
+     * @return numero random generado
+     */
         public static int random(int min, int max){
             int aleatori;
             Random rnd=new Random();
