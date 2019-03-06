@@ -106,4 +106,16 @@ public class Lib {
         }
         System.out.println("\u001B[0m");
     }
+
+    public static String calcularletraDni(int numeroDni){
+        int calcularLletra;
+        char lletraNif;
+        String stringLletraDni;
+        String lletres="TRWAGMYFPDXBNJZSQVHLCKE";
+        calcularLletra=numeroDni%23;
+        lletraNif=lletres.charAt(calcularLletra);
+        stringLletraDni=Character.toString(lletraNif);
+        return stringLletraDni;
+    }
+
 }

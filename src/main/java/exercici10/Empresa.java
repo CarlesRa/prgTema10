@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Empresa {
     private ArrayList <Empleado> empleados;
-    private int puntero = 0;
+    private static int puntero = 0;
     private Scanner lec = new Scanner(System.in);
     public Empresa() {
         this.empleados = new ArrayList<>();
@@ -24,6 +24,7 @@ public class Empresa {
     //metodes
     public void nuevoEmpleado() {
         String nif;
+        int dni = 0;
         String nom;
         String cognom;
         GregorianCalendar fechaNac = new GregorianCalendar();
@@ -36,15 +37,21 @@ public class Empresa {
         int numHijos = 0;
         boolean esCorrecte = false;
         do {
-            System.out.print("Introduzca el nif: ");
-            nif = lec.nextLine();
-            if (!validarNif(nif)){
+            System.out.print("Introduzca el número de DNI: ");
+            try{
+                dni = Integer.parseInt(lec.nextLine());
+                esCorrecte = true;
+                if (dni < 10000000 || dni > 99999999){
+                    System.out.println("No puede haber dni con ese numero...");
+                    esCorrecte = false;
+                }
+            }
+            catch (NumberFormatException nfe){
+                Lib.mensajeError();
                 esCorrecte = false;
             }
-            else {
-                esCorrecte = true;
-            }
         }while (!esCorrecte);
+        nif = dni+Lib.calcularletraDni(dni);
         for (int i=0; i<empleados.size(); i++){
 
             if (empleados.get(i).getNif().equalsIgnoreCase(nif)){
@@ -166,6 +173,7 @@ public class Empresa {
             empleadoAux = new Empleado(nif[i],nombre[Lib.random(0,nombre.length-1)],cognom[Lib.random(0,cognom.length-1)],
             fechaNac[Lib.random(0,fechaNac.length-1)],sueldo[Lib.random(0,sueldo.length-1)]);
             empleados.add(empleadoAux);
+            puntero++;
             for(int z=0; z<Lib.random(0,3);z++){
                 hijoAux = new Hijo(nombre[Lib.random(0,nombre.length-1)],edadHijo[Lib.random(0,edadHijo.length-1)]);
                 empleadoAux.addHijo(hijoAux);
@@ -324,33 +332,25 @@ public class Empresa {
     }
 
     public void buscarPorNombre(){
-        String nombre = "";
-        String subNombre = "";
+        String nombreU = "";
         boolean esta = false;
-        int posicion = 0;
         System.out.print("Introduzca el nombre: ");
-            nombre = lec.nextLine();
-        try {
-            subNombre = nombre.substring(0, nombre.length() - 1);
-        }
-        catch (StringIndexOutOfBoundsException sfe){
-
-        }
-        System.out.println(subNombre);
+            nombreU = lec.nextLine();
         for (int i=0; i<empleados.size(); i++){
-            if (empleados.get(i).getNom().substring(0,nombre.length()).equalsIgnoreCase(nombre)){
-                esta = true;
-                posicion = i;
+            try {
+                if (empleados.get(i).getNom().substring(0, nombreU.length()).equalsIgnoreCase(nombreU)) {
+                    esta = true;
+                    System.out.println(empleados.get(i).toString());
+                }
+            }
+            catch(StringIndexOutOfBoundsException soobe){
+
             }
         }
-        if (esta){
-            System.out.println(empleados.get(posicion).toString());
-        }
-        else{
+        if (!esta){
             System.out.println("ningun empleado con ese nombre....");
             Lib.continuar();
         }
-
     }
 
     public void buscarPorRangoFecha(){
