@@ -11,8 +11,8 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.*;
 
-public class TestExamen{
-    public TestExamen(){
+public class Persona {
+    public Persona(){
         ArrayList<GregorianCalendar>fechas = new ArrayList<GregorianCalendar>();
         GregorianCalendar fecha2 = new GregorianCalendar();
         String fecha = "15/02/1982";
